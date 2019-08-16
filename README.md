@@ -1,8 +1,10 @@
 ### Server creator steps
 Remote forward:
+
     ssh -R 33420:localhost:33469
 
 Putty config for remote forward (server host):
+
     Host Name => <EC2 public ip>
     Port => 22
     SSH > Auth > Private key => <PPK file>
@@ -13,13 +15,16 @@ Putty config for remote forward (server host):
             R33420 localhost:33469
 
 Emu:
+
     /server 33469
 
 ### Client steps
 Local forward:
+
     ssh -L 33420:localhost:33420
 
 Putty config for remote forward (client host):
+
     Host Name => <EC2 public ip>
     Port => 22
     SSH > Auth > Private key => <PPK file>
@@ -30,6 +35,7 @@ Putty config for remote forward (client host):
             L33420 localhost:33420
 
 Emu:
+
     /connect 127.0.0.1 33420
 
 ### 3rd party server required
