@@ -1,7 +1,7 @@
-### Server creator steps
+### Server steps
 Remote forward:
 
-    ssh -R 33420:localhost:33469
+    ssh -R 33420:localhost:33469 <EC2 public ip>
 
 Putty config for remote forward (server host):
 
@@ -21,7 +21,7 @@ Emu:
 ### Client steps
 Local forward:
 
-    ssh -L 33420:localhost:33420
+    ssh -L 33420:localhost:33420 <EC2 public ip>
 
 Putty config for remote forward (client host):
 
